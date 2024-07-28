@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>My To Do List</title>
+</head>
+<body>
+    <div class="todo-wrapper">
+        <h2>My To Do List</h2>
+        <p>Double-click to complete a task</p>
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'monday')">Monday</button>
+            <button class="tab-button" onclick="openTab(event, 'tuesday')">Tuesday</button>
+            <button class="tab-button" onclick="openTab(event, 'wednesday')">Wednesday</button>
+            <button class="tab-button" onclick="openTab(event, 'thursday')">Thursday</button>
+            <button class="tab-button" onclick="openTab(event, 'friday')">Friday</button>
+            <button class="tab-button" onclick="openTab(event, 'saturday')">Saturday</button>
+        </div>
+        <form name="todo-adder" onsubmit="addToDoItem(); return false;">
+            <input type="text" id="todo-entry-box" placeholder="Enter a new task..." />
+            <button type="submit" id="add-button" class="pretty-button"><i class="fas fa-plus"></i> Add</button>
+        </form>
+        <div id="monday" class="tab-content active">
+            <ol id="todo-list-monday" class="todo-list"></ol>
+        </div>
+        <div id="tuesday" class="tab-content">
+            <ol id="todo-list-tuesday" class="todo-list"></ol>
+        </div>
+        <div id="wednesday" class="tab-content">
+            <ol id="todo-list-wednesday" class="todo-list"></ol>
+        </div>
+        <div id="thursday" class="tab-content">
+            <ol id="todo-list-thursday" class="todo-list"></ol>
+        </div>
+        <div id="friday" class="tab-content">
+            <ol id="todo-list-friday" class="todo-list"></ol>
+        </div>
+        <div id="saturday" class="tab-content">
+            <ol id="todo-list-saturday" class="todo-list"></ol>
+        </div>
+        <div id="control-wrapper">
+            <button id="clear-completed-button" onclick="clearCompletedToDoItems()" class="pretty-button"><i class="fas fa-check-double"></i> Clear Completed</button>
+            <button id="empty-button" onclick="emptyList()" class="pretty-button"><i class="fas fa-trash"></i> Empty List</button>
+            <button id="save-button" onclick="saveList()" class="pretty-button"><i class="fas fa-save"></i> Save List</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

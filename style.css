@@ -1,0 +1,170 @@
+body {
+    background: linear-gradient(to right, #8e64dc, #a37edc);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.todo-wrapper {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.todo-wrapper h2 {
+    margin: 0;
+    color: #333333;
+    font-weight: 700;
+}
+
+.todo-wrapper p {
+    font-style: italic; 
+    color: #777777;
+    margin: 5px 0 20px 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    background-color: #8e64dc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+    border-radius: 5px 5px 0 0;
+    font-size: medium;
+}
+
+.tab-button:hover, .tab-button.active {
+    background-color: #724bb7;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.todo-wrapper form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-wrapper input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.todo-wrapper .pretty-button {
+    margin-left: 10px;
+    color: white;
+    background-color: #8e64dc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-size: medium;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-wrapper .pretty-button i {
+    margin-right: 5px;
+}
+
+.todo-wrapper .pretty-button:hover {
+    background-color: #724bb7;
+    transform: translateY(-2px);
+}
+
+.todo-wrapper .pretty-button:active {
+    background-color: #5a3b9b;
+}
+
+.todo-wrapper ol {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+.todo-wrapper ol li {
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.todo-wrapper ol li:hover {
+    background-color: #f1f1f1;
+}
+
+.todo-wrapper ol li.completed {
+    text-decoration: line-through;
+    color: grey;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.todo-wrapper ol li .remove-button {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+.todo-wrapper ol li .remove-button:hover {
+    color: #ff4d4d;
+}
+
+.todo-wrapper .todo-time {
+    font-size: 12px;
+    color: #999999;
+    margin-top: 5px;
+}
+
+#control-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
